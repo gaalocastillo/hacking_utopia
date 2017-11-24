@@ -1,0 +1,200 @@
+{
+  "buildings": [
+    {
+      "address": "Wankdorfallee 4, 3030 Bern",
+      "code": "EspacePost",
+      "id": 6,
+      "latitude": 46.967498779296875,
+      "longitude": 7.461900234222412
+    },
+    {
+      "address": "Pfingstweidstrasse 60 B, 8005 Zürich",
+      "code": "Pfingstweidstr.",
+      "id": 7,
+      "latitude": 47.3901481628418,
+      "longitude": 8.514419555664062
+    },
+    {
+      "address": "Mingerstrasse 20, 3030 Bern",
+      "code": "Bern Hauptsitz PF",
+      "id": 8,
+      "latitude": 46.95701217651367,
+      "longitude": 7.4679460525512695
+    },
+    {
+      "address": "Funkenstrasse 10, 4800 Zofingen",
+      "code": "Zofingen",
+      "id": 9,
+      "latitude": 47.29182052612305,
+      "longitude": 7.941188812255859
+    },
+    {
+      "address": "Engehaldenstrasse 35, 3012 Bern",
+      "code": "Bern Engehalde 35",
+      "id": 10,
+      "latitude": 46.956687927246094,
+      "longitude": 7.439786911010742
+    },
+    {
+      "address": "Engehaldenstrasse 37, 3012 Bern",
+      "code": "Bern Engehalde 37",
+      "id": 11,
+      "latitude": 46.95762252807617,
+      "longitude": 7.440116882324219
+    },
+    {
+      "address": "Engehaldenstrasse 39, 3012 Bern",
+      "code": "Bern Engehalde 39",
+      "id": 12,
+      "latitude": 46.95822525024414,
+      "longitude": 7.440457820892334
+    },
+    {
+      "address": "Webergutstrasse 12A, 3052 Zollikofen",
+      "code": "Zollikofen 12A",
+      "id": 13,
+      "latitude": 47.00241470336914,
+      "longitude": 7.440598964691162
+    },
+    {
+      "address": "Webergutstrasse 12B, 3052 Zollikofen",
+      "code": "Zollikofen 12B",
+      "id": 14,
+      "latitude": 47.002140045166016,
+      "longitude": 7.441307067871094
+    },
+    {
+      "address": "Webergutstrasse 12C, 3052 Zollikofen",
+      "code": "Zollikofen 12C",
+      "id": 15,
+      "latitude": 47.00275421142578,
+      "longitude": 7.44085693359375
+    },
+    {
+      "address": "Stöckackerstrasse 50, 3027 Bern",
+      "code": "Bern Stöckackerstrasse",
+      "id": 16,
+      "latitude": 46.947252,
+      "longitude": 7.401773
+    },
+    {
+      "address": "Engehaldenstrasse 22/26, 3012 Bern",
+      "code": "Bern Engehalde 22/26",
+      "id": 17,
+      "latitude": 46.956015,
+      "longitude": 7.439951
+    },
+    {
+      "address": "Eckweg 8, 2504 Biel",
+      "code": "Biel/Bienne 6",
+      "id": 18,
+      "latitude": 47.149347,
+      "longitude": 7.266738
+    },
+    {
+      "address": "St. Leonhardstrasse 45, 9000 St. Gallen",
+      "code": "St. Gallen Managementgebäude",
+      "id": 19,
+      "latitude": 47.421797,
+      "longitude": 9.369448
+    },
+    {
+      "address": "Gürtelstrasse 14 + 20, 7000 Chur",
+      "code": "Chur 1 (PBG)",
+      "id": 20,
+      "latitude": 46.852499,
+      "longitude": 9.527671
+    },
+    {
+      "address": "Obernauerstrasse 18, 6010 Kriens",
+      "code": "Kriens",
+      "id": 21,
+      "latitude": 47.034214,
+      "longitude": 8.273571
+    },
+    {
+      "address": "Rue du Grand-Pré 2A, 1007 Lausanne",
+      "code": "Lausanne Malley Balance",
+      "id": 22,
+      "latitude": 46.526691,
+      "longitude": 6.604063
+    },
+    {
+      "address": "Freiburgstrasse 453, 3018 Bern",
+      "code": "Bern Freiburgstrasse",
+      "id": 23,
+      "latitude": 46.933118,
+      "longitude": 7.390597
+    },
+    {
+      "address": "Baumackerstrasse 42-46 / Franklinstrasse, 8050 Zürich",
+      "code": "Zürich Oerlikon",
+      "id": 25,
+      "latitude": 47.40946,
+      "longitude": 8.543197
+    },
+    {
+      "address": "Viale Stazione 15, 6500 Bellinzona",
+      "code": "Bellinzona Posta Vecchia",
+      "id": 26,
+      "latitude": 46.193609,
+      "longitude": 9.02584
+    },
+    {
+      "address": "Rue du Château d'en Bas 33, 1630 Bulle",
+      "code": "Bulle PostFinance Operation Center",
+      "id": 27,
+      "latitude": 46.621089,
+      "longitude": 7.05341
+    },
+    {
+      "address": "Molliserstrasse 41, 8754 Netstal",
+      "code": "Netstal",
+      "id": 28,
+      "latitude": 47.067548,
+      "longitude": 9.058641
+    },
+    {
+      "address": "Emil Frey Strasse 100, 4142 Münchenstein",
+      "code": "Münchenstein",
+      "id": 29,
+      "latitude": 47.526462,
+      "longitude": 7.610783
+    },
+    {
+      "address": "Oberstrasse 153, 9000 St. Gallen",
+      "code": "St. Gallen PF Oberstr. 153",
+      "id": 30,
+      "latitude": 47.413776,
+      "longitude": 9.35595
+    },
+    {
+      "address": "Oberstrasse 149, 9000 St. Gallen",
+      "code": "St. Gallen PF Oberstr. 149",
+      "id": 31,
+      "latitude": 47.413931,
+      "longitude": 9.356571
+    },
+    {
+      "address": "Mingerstrase 12, 3014 Bern",
+      "code": "Bern PostFinance Arena",
+      "id": 32,
+      "latitude": 46.958556,
+      "longitude": 7.468643
+    },
+    {
+      "address": "Altgraben 5, 4624 Härkingen",
+      "code": "Härkingen Paketzentrum",
+      "id": 34,
+      "latitude": 47.3158,
+      "longitude": 7.808108
+    },
+    {
+      "address": "Lischmatt 40, 4624 Härkingen",
+      "code": "Härkingen Briefzentrum",
+      "id": 35,
+      "latitude": 47.318887,
+      "longitude": 7.81596
+    }
+  ]
+}
