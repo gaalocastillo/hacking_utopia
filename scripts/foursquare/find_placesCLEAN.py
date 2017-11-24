@@ -35,7 +35,7 @@ listaClientSecrets = ["SED3ZC05NNINFXU5FB1FEMHIGRFRECRMUKB4AALUSXE4DJOF",
 
 indice = 0
 
-
+dictBase={}
 fileworker = FileWorker()
 
 #ABRO EL ARCHIVO CON LOS DATOS DE LOS EDIFICIOS
@@ -44,24 +44,25 @@ filename = '../../data/buildings.csv'
 file=open(filename)
 file.readline()
 for line in file:
-	datos=line.split(",")
-  	lat = datos[3]
-  	lng = datos[4]
-  	ciudad = datos[-1]
-  	id_ciudad=datos[2]
-  	lat_lng = lat + ',' + lng
+  datos=line.split(",")
+  lat = datos[3]
+  lng = datos[4]
+  ciudad = datos[-1]
+  id_edificio=datos[2]
+  nombre_edificio=datos[1]
+  lat_lng = lat + ',' + lng
 
-  	if lat_lng == '0,0':
-    	continue
+  if lat_lng == '0,0':
+    continue
 
-  	#limit representa la cantidad maxima de venues que se extraeran por coordenada
+  #limit representa la cantidad maxima de venues que se extraeran por coordenada
   limit = '50'
 
   #radius representa el radio maximo en metros de extraccion de venues cercanos por coordenada
   radius = "200"
 
   #fecha del dia actual
-  v = "20170704"
+  v = "20171124"
 
   try:
     url = "https://api.foursquare.com/v2/venues/search?ll="+lat_lng+"&limit="+limit+"&radius="+radius+"&client_id="+listaClientIDs[indice%11]+"&client_secret="+listaClientSecrets[indice%11]+"&v="+v
@@ -83,8 +84,7 @@ for line in file:
     count=0
     type=""
     while(count<size):
-      if(count>5):
-          break
+    
       id_lugar=data["response"]["venues"][count]["id"]
       place = data["response"]["venues"][count]["name"]
 
@@ -113,8 +113,10 @@ for line in file:
 
   #Writes in JSON
   filename = '../../outputs/buildings_pois.json'
-  useful_data = {'lat': lat, 'lng': lng, 'provincia': provincia, 'venues': infoLugares}
-  dictBase={idRadiobase:useful_data}
-  collection.insert(dictBase)
-  #fileworker.writeJSON(filename, dictBase)
+  useful_data = {'code':nombre_edificio,'lat': lat, 'lng': lng, 'city': ciudad, 'venues': infoLugares}
+  dictBase[id_edificio]=useful_data
+  
+d={}
+d["data"]=dictBase
+fileworker.writeJSON(filename, d)
 
