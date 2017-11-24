@@ -43,26 +43,18 @@ filename = '../../data/buildings.csv'
 
 file=open(filename)
 file.readline()
+for line in file:
+	datos=line.split(",")
+  	lat = datos[3]
+  	lng = datos[4]
+  	ciudad = datos[-1]
+  	id_ciudad=datos[2]
+  	lat_lng = lat + ',' + lng
 
+  	if lat_lng == '0,0':
+    	continue
 
-data = infoBases['data']
-coordenadas = {}
-
-for idBase in data:
-  coordenadas[idBase] = {'lat' : data[idBase]['coordinates'][0], 'lng' : data[idBase]['coordinates'][1], 'provincia' : data[idBase]['provincia']}
-
-entry = {}
-
-for idRadiobase in coordenadas:
-  lat = coordenadas[idRadiobase]['lat']
-  lng = coordenadas[idRadiobase]['lng']
-  provincia=coordenadas[idRadiobase]['provincia']
-  lat_lng = lat + ',' + lng
-
-  if lat_lng == '0,0':
-    continue
-
-  #limit representa la cantidad maxima de venues que se extraeran por coordenada
+  	#limit representa la cantidad maxima de venues que se extraeran por coordenada
   limit = '50'
 
   #radius representa el radio maximo en metros de extraccion de venues cercanos por coordenada
