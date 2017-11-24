@@ -2,13 +2,10 @@
 # coding: latin-1-
 import io
 import urllib2
-import json
+import json, requests
 import unicodedata
 from FileWorker import FileWorker
-from pymongo import MongoClient
-client = MongoClient('localhost', 27017)
-db = client['foursquare3_db']
-collection = db['venues_from_radiobase']
+
 
 
 listaClientIDs = ["0125VG400XXUPPTHKROUI4BJBAYBAS4T1QL0WC0IQPBDP0M2",
@@ -41,9 +38,11 @@ indice = 0
 
 fileworker = FileWorker()
 
-filename = './outputs/infoBasesEventosManabi.json'
+#ABRO EL ARCHIVO CON LOS DATOS DE LOS EDIFICIOS
+filename = '../../data/buildings.csv'
 
-infoBases = fileworker.readJSON(filename)
+file=open(filename)
+file.readline()
 
 
 data = infoBases['data']
@@ -64,10 +63,10 @@ for idRadiobase in coordenadas:
     continue
 
   #limit representa la cantidad maxima de venues que se extraeran por coordenada
-  limit = '5'
+  limit = '50'
 
   #radius representa el radio maximo en metros de extraccion de venues cercanos por coordenada
-  radius = "500"
+  radius = "200"
 
   #fecha del dia actual
   v = "20170704"
@@ -121,7 +120,7 @@ for idRadiobase in coordenadas:
 
 
   #Writes in JSON
-  filename = 'jsonTEST'
+  filename = '../../outputs/buildings_pois.json'
   useful_data = {'lat': lat, 'lng': lng, 'provincia': provincia, 'venues': infoLugares}
   dictBase={idRadiobase:useful_data}
   collection.insert(dictBase)
