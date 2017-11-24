@@ -44,7 +44,7 @@ filename = '../../data/buildings.csv'
 file=open(filename)
 file.readline()
 for line in file:
-  datos=line.split(",")
+  datos=line.split("|")
   lat = datos[3]
   lng = datos[4]
   ciudad = datos[-1]
@@ -112,7 +112,7 @@ for line in file:
 
 
   #Writes in JSON
-  filename = '../../outputs/buildings_pois.json'
+  filename = 'buildings_pois'
   useful_data = {'code':nombre_edificio,'lat': lat, 'lng': lng, 'city': ciudad, 'venues': infoLugares}
   dictBase[id_edificio]=useful_data
   
