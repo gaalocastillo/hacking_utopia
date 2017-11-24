@@ -1,29 +1,29 @@
-address,code,id,latitude,longitude,city
-"Wankdorfallee 4, 3030 Bern",EspacePost,6,46.9674987793,7.46190023422,BERN
-"Pfingstweidstrasse 60 B, 8005 Zürich",Pfingstweidstr.,7,47.3901481628,8.51441955566,ZURICH
-"Mingerstrasse 20, 3030 Bern",Bern Hauptsitz PF,8,46.9570121765,7.46794605255,BERN
-"Funkenstrasse 10, 4800 Zofingen",Zofingen,9,47.2918205261,7.94118881226,ZOFINGEN
-"Engehaldenstrasse 35, 3012 Bern",Bern Engehalde 35,10,46.9566879272,7.43978691101,BERN
-"Engehaldenstrasse 37, 3012 Bern",Bern Engehalde 37,11,46.9576225281,7.44011688232,BERN
-"Engehaldenstrasse 39, 3012 Bern",Bern Engehalde 39,12,46.9582252502,7.44045782089,BERN
-"Webergutstrasse 12A, 3052 Zollikofen",Zollikofen 12A,13,47.0024147034,7.44059896469,ZOLLIKOFEN
-"Webergutstrasse 12B, 3052 Zollikofen",Zollikofen 12B,14,47.0021400452,7.44130706787,ZOLLIKOFEN
-"Webergutstrasse 12C, 3052 Zollikofen",Zollikofen 12C,15,47.0027542114,7.44085693359,ZOLLIKOFEN
-"Stöckackerstrasse 50, 3027 Bern",Bern Stöckackerstrasse,16,46.947252,7.401773,BERN
-"Engehaldenstrasse 22/26, 3012 Bern",Bern Engehalde 22/26,17,46.956015,7.439951,BERN
-"Eckweg 8, 2504 Biel",Biel/Bienne 6,18,47.149347,7.266738,BIEL
-"St. Leonhardstrasse 45, 9000 St. Gallen",St. Gallen Managementgebäude,19,47.421797,9.369448,ST. GALLEN
-"Gürtelstrasse 14 + 20, 7000 Chur",Chur 1 (PBG),20,46.852499,9.527671,CHUR
-"Obernauerstrasse 18, 6010 Kriens",Kriens,21,47.034214,8.273571,KRIENS
-"Rue du Grand-Pré 2A, 1007 Lausanne",Lausanne Malley Balance,22,46.526691,6.604063,LAUSANNE
-"Freiburgstrasse 453, 3018 Bern",Bern Freiburgstrasse,23,46.933118,7.390597,BERN
-"Baumackerstrasse 42-46 / Franklinstrasse, 8050 Zürich",Zürich Oerlikon,25,47.40946,8.543197,ZURICH
-"Viale Stazione 15, 6500 Bellinzona",Bellinzona Posta Vecchia,26,46.193609,9.02584,BELLINZONA
-"Rue du Château d'en Bas 33, 1630 Bulle",Bulle PostFinance Operation Center,27,46.621089,7.05341,BULLE
-"Molliserstrasse 41, 8754 Netstal",Netstal,28,47.067548,9.058641,NETSTAL
-"Emil Frey Strasse 100, 4142 Münchenstein",Münchenstein,29,47.526462,7.610783,MUNCHENSTEIN
-"Oberstrasse 153, 9000 St. Gallen",St. Gallen PF Oberstr. 153,30,47.413776,9.35595,ST. GALLEN
-"Oberstrasse 149, 9000 St. Gallen",St. Gallen PF Oberstr. 149,31,47.413931,9.356571,ST. GALLEN
-"Mingerstrase 12, 3014 Bern",Bern PostFinance Arena,32,46.958556,7.468643,BERN
-"Altgraben 5, 4624 Härkingen",Härkingen Paketzentrum,34,47.3158,7.808108,HARKINGEN
-"Lischmatt 40, 4624 Härkingen",Härkingen Briefzentrum,35,47.318887,7.81596,HARKINGEN
+address|code|id|latitude|longitude|city
+Wankdorfallee 4, 3030 Bern|EspacePost|6|46.9674987793|7.46190023422|BERN
+Pfingstweidstrasse 60 B| 8005 Zürich|Pfingstweidstr.|7|47.3901481628|8.51441955566|ZURICH
+Mingerstrasse 20, 3030 Bern|Bern Hauptsitz PF|8|46.9570121765|7.46794605255|BERN
+Funkenstrasse 10, 4800 Zofingen|Zofingen|9|47.2918205261|7.94118881226|ZOFINGEN
+Engehaldenstrasse 35, 3012 Bern|Bern Engehalde 35|10|46.9566879272|7.43978691101|BERN
+Engehaldenstrasse 37, 3012 Bern|Bern Engehalde 37|11|46.9576225281|7.44011688232|BERN
+Engehaldenstrasse 39, 3012 Bern|Bern Engehalde 39|12|46.9582252502|7.44045782089|BERN
+Webergutstrasse 12A, 3052 Zollikofen|Zollikofen 12A|13|47.0024147034|7.44059896469|ZOLLIKOFEN
+Webergutstrasse 12B, 3052 Zollikofen|Zollikofen 12B|14|47.0021400452|7.44130706787|ZOLLIKOFEN
+Webergutstrasse 12C, 3052 Zollikofen|Zollikofen 12C|15|47.0027542114|7.44085693359|ZOLLIKOFEN
+Stöckackerstrasse 50, 3027 Bern|Bern Stöckackerstrasse|16|46.947252|7.401773|BERN
+Engehaldenstrasse 22/26, 3012 Bern|Bern Engehalde 22/26|17|46.956015|7.439951|BERN
+Eckweg 8, 2504 Biel|Biel/Bienne 6|18|47.149347|7.266738|BIEL
+St. Leonhardstrasse 45 9000 St. Gallen|St. Gallen Managementgebäude|19|47.421797|9.369448|ST. GALLEN
+Gürtelstrasse 14 + 20, 7000 Chur|Chur 1 (PBG)|20|46.852499|9.527671|CHUR
+Obernauerstrasse 18, 6010 Kriens|Kriens|21|47.034214|8.273571|KRIENS
+Rue du Grand-Pré 2A, 1007 Lausanne|Lausanne Malley Balance|22|46.526691|6.604063|LAUSANNE
+Freiburgstrasse 453, 3018 Bern|Bern Freiburgstrasse|23|46.933118|7.390597|BERN
+Baumackerstrasse 42-46 / Franklinstrasse, 8050 Zürich|Zürich Oerlikon|25|47.40946|8.543197|ZURICH
+Viale Stazione 15, 6500 Bellinzona|Bellinzona Posta Vecchia|26|46.193609|9.02584|BELLINZONA
+Rue du Château d'en Bas 33, 1630 Bulle|Bulle PostFinance Operation Center|27|46.621089|7.05341|BULLE
+Molliserstrasse 41, 8754 Netstal|Netstal|28|47.067548|9.058641|NETSTAL
+Emil Frey Strasse 100, 4142 Münchenstein|Münchenstein|29|47.526462|7.610783|MUNCHENSTEIN
+Oberstrasse 153, 9000 St. Gallen|St. Gallen PF Oberstr. 153|30|47.413776|9.35595|ST. GALLEN
+Oberstrasse 149, 9000 St. Gallen|St. Gallen PF Oberstr. 149|31|47.413931|9.356571|ST. GALLEN
+Mingerstrase 12, 3014 Bern|Bern PostFinance Arena|32|46.958556|7.468643|BERN
+Altgraben 5, 4624 Härkingen|Härkingen Paketzentrum|34|47.3158|7.808108|HARKINGEN
+Lischmatt 40, 4624 Härkingen|Härkingen Briefzentrum|35|47.318887|7.81596|HARKINGEN
