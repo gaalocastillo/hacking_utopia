@@ -14,6 +14,8 @@ Obtener numero de Workplaces
     *by = floor,attributeType         Number of workspaces by floor
     *by = building                    Number of workspaces by building
 
+REVISAR TODAS EN API.HTML
+
 '''
 
 
