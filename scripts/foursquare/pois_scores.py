@@ -32,7 +32,15 @@ for idEdificio in data:
     d[id_venue]=dict_venues[id_venue]['checkins']/total_checkins
 
   scoreList=list(dict_venues.values())
-  score=
+  scoreList=sort(scoreList)
+  score=0
+  tam=len(scoreList)
+  if(tam%2==0):
+    s1=scoreList[tam/2]
+    s2=scoreList[(tam/2)+1]
+    score=(s1+s2)/2
+  else:
+    score=scoreList[(tam+1)/2]
   line=data[idEdificio]⁺","+num_venues+","+score
   output.write(line)
 
