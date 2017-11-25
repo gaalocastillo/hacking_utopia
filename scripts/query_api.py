@@ -31,7 +31,7 @@ OF = "desks.occupied" #desks, desks.occupied, desks.workhourOccupied
 BY = "hour"
 
 buildings = [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]
-'''
+
 for building in buildings:
 	BUILDING = str(building) #Id of specific building
 	FLOOR = "" #Id of specific floor
@@ -67,7 +67,7 @@ for building in buildings:
 		response = response.json()
 		print response
 		print len(response)
-		with open('../outputs/%s_occupied_day.json' %BUILDING, 'w') as fp:
+		with open('../outputs/occupied_hour/%s_occupied_hour.json' %BUILDING, 'w') as fp:
 		    json.dump(response, fp)
 	else:
 		print ("Something went wrong! Error %d" % response.status_code)
@@ -110,3 +110,4 @@ if str(response.status_code).startswith("2"):
 	    json.dump(response, fp)
 else:
 	print ("Something went wrong! Error %d" % response.status_code)
+'''
