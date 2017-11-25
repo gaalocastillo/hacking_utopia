@@ -49,7 +49,7 @@ for idEdificio in data:
   print("ASDFasd")
   print(str(num_venues))
   print(str(score))
-  line=idEdificio+","+str(num_venues)+","+str(score)
+  line=idEdificio+","+str(num_venues)+","+str(score*1000)
   print (line)
   output.write(line+"\n")
 
