@@ -1,0 +1,4 @@
+Total de locations: 10666
+Total de pisos: 156
+Promedio de locations por piso: 68
+
