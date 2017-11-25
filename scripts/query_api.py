@@ -14,6 +14,8 @@ Obtener numero de Workplaces
     *by = floor,attributeType         Number of workspaces by floor
     *by = building                    Number of workspaces by building
 
+REVISAR TODAS EN API.HTML
+
 '''
 
 
@@ -23,6 +25,8 @@ HOST = "https://hack.lct.ee/api/v1/"
 
 # GET
 r = s.post("https://hack.lct.ee/dologin", data={'username': "galo.castillo", 'password': 'galoxD14123456789'})
+
+#  ======== VARIABLES A CAMBIAR =========
 
 FN = "count" #count, sum, max, min, avg
 OF = "desks" #desks, desks.occupied, desks.workhourOccupied
@@ -35,6 +39,9 @@ ATTRIBUTE_ID = "" # depends on location
 
 START = "2017-07-01T00:00:00%2B02:00" # starting time window
 END = "2017-12-31T23:59:59%2B02:00" # ending time window
+
+# ==================================== #
+
 
 PARAM_NAMES = ["fn", "of", "by", "locationFilter.building", "locationFilter.floor", "locationFilter.attribute.", "timeFilter.start", "timeFilter.end"]
 PARAMS = [FN, OF, BY, BUILDING, FLOOR, ATTRIBUTE_NAME, START, END]
@@ -56,6 +63,6 @@ print query_builder
 print HOST + "stats" + query_builder
 response = s.get(HOST + "stats" + query_builder)
 print response
-response = response.json()
+response = response.json()  #objeto json
 print response
 print len(response)
