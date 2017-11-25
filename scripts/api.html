@@ -1,0 +1,380 @@
+<h1 id="statistics-api">Statistics API</h1>
+<h2 id="group-statistics">Group Statistics</h2>
+<p>Analytics API to query office usage statistics.</p>
+<p>The API is queried by specifying <code>fn</code>, <code>of</code> and <code>by</code> parameter, as well as filters. The following statistics are supported. All calls support filters.</p>
+<ul>
+<li><em>Number of desks</em> (count of desks)
+<ul>
+<li>number of desks for the given filter, for example to determine how many desks are on a floor</li>
+<li><code>fn=count</code>, <code>of=desks</code> (supports <code>timeFilter.start</code> and <code>timeFilter.end</code>, or <code>timeFilter.at</code>)</li>
+<li>get number of desks per floor: add <code>by=floor</code> (supports only <code>timeFilter.at</code>)</li>
+<li>get number of desks per floor and attribute: add <code>by=floor,attributeType</code>, where <code>attributeType</code> is any valid attribute type, for example <code>department</code>, or <code>deskType</code> (supports only <code>timeFilter.at</code>)</li>
+<li>get number of desks per building: add <code>by=building</code> (supports only <code>timeFilter.at</code>)</li>
+</ul></li>
+<li><em>Timeline of occupied/warm desks</em> (sum of occupied desks, in every minute/hour/day)
+<ul>
+<li>list of data points, each with a <code>dateTime</code> and a <code>value</code>, reporting the number of occupied/warm desks at the date</li>
+<li><code>fn=sum</code>, <code>of=desks.occupied</code> or <code>of=desks.warm</code>, <code>by=minute</code>, <code>by=hour</code> or <code>by=day</code></li>
+<li>get the timeline with full resolution: <code>fn=sum</code> <code>of=desks.occupied</code> <code>by=minute</code></li>
+<li>get the timeline of hourly peaks: <code>fn=sum</code> <code>of=desks.occupied</code> <code>by=hour</code></li>
+<li>get the timeline of daily peaks: <code>fn=sum</code> <code>of=desks.occupied</code> <code>by=day</code></li>
+</ul></li>
+<li><em>Heatmap</em> (Sum of occupation, per desk)
+<ul>
+<li>list of data points, each with a <code>location</code> and a <code>value</code>, reporting the total usage (in seconds) of the location</li>
+<li><code>fn=sum</code>, <code>of=desks.occupied</code>, <code>by=desk</code></li>
+</ul></li>
+<li><em>Heatmap of workhours</em> (Sum of occupation during workhours, per desk)
+<ul>
+<li>list of data points, each with a <code>location</code> and a <code>value</code>, reporting the total usage (in seconds) of the location from during the workhours</li>
+<li><code>fn=sum</code>, <code>of=desks.workhourOccupied</code>, <code>by=desk</code></li>
+</ul></li>
+<li><em>Heatmap of usage since last cleaning</em> (Sum of occupation, since last cleaning, per desk)
+<ul>
+<li>list of data points, each with a <code>location</code> and a <code>value</code>, reporting the total usage (in seconds) of the location since the last cleaning</li>
+<li><code>fn=sum</code>, <code>of=desks.occupiedSinceCleaning</code>, <code>by=desk</code></li>
+</ul></li>
+<li><em>Average usage during workhours</em> (average of occupation during workhours)
+<ul>
+<li>Average number of desks that were occupied during the given interval. Returns one data point with a <code>value</code>, reporting the average</li>
+<li><code>fn=avg</code>, <code>of=desks.workhourOccupied</code> or <code>of=desks.workhourWarm</code></li>
+<li>get average per floor: add <code>by=floor</code></li>
+<li>get average per floor and attribute: add <code>by=floor,attributeType</code>, where <code>attributeType</code> is any valid attribute type, for example <code>department</code>, or <code>deskType</code></li>
+<li>get average per building: add <code>by=building</code></li>
+</ul></li>
+<li><em>Maximum desk usage</em> (maximum of occupied desks)
+<ul>
+<li>Maximum number of desks that were occupied during the given interval. Returns one data point with the <code>dateTime</code> (when the peak occurred) and <code>value</code> with the max number of used desks</li>
+<li><code>fn=max</code>, <code>of=desks.occupied</code> or <code>of=desks.warm</code></li>
+<li>get peak per floor: add <code>by=floor</code></li>
+<li>get peak per floor and attribute: add <code>by=floor,attributeType</code>, where <code>attributeType</code> is any valid attribute type, for example <code>department</code>, or <code>deskType</code></li>
+<li>get peak per building: add <code>by=building</code></li>
+</ul></li>
+<li><em>Current utilization</em> (sum of currently occupied desks)
+<ul>
+<li>Number of desks that are currently occupied. Returns one data point with the number of the currently occupied desks as <code>value</code>.</li>
+<li><code>fn=sum</code>, <code>of=desks.occupied</code>, <code>timeFilter.at=timestamp</code></li>
+<li>get number of occupied/warm desks per floor: add <code>by=floor</code></li>
+<li>get number of occupied/warm desks per floor and attribute: add <code>by=floor,attributeType</code>, where <code>attributeType</code> is any valid attribute type, for example <code>department</code>, or <code>deskType</code></li>
+<li>get number of occupied/warm desks per building: add <code>by=building</code></li>
+</ul></li>
+<li><em>Frequency distribution of the workhour occupancy</em> (frequency of desk occupancy)
+<ul>
+<li>Distribution of work hour intervals (lengths of visits). Returns list of data points, each with a <code>base</code> (the duration) and <code>frequency</code> (the cumulative frequency of the occupancy).</li>
+<li>x% of the time, less than y desks are occupied</li>
+<li><code>fn=freq</code>, <code>of=desks.occupied</code></li>
+</ul></li>
+<li><em>Frequency distribution of the average daily desk usage</em> (frequency of desk usage per desk and day)
+<ul>
+<li>frequency in 1 hour buckets</li>
+<li><code>fn=freq</code>, <code>of=desks.occupied</code> or <code>of=desks.warm</code>, <code>by=desk,day</code></li>
+</ul></li>
+<li><em>Frequency of visit durations</em>
+<ul>
+<li>frequency in 1 hour buckets</li>
+<li><code>fn=freq</code>, <code>of=desks.occupied</code> or <code>of=desks.warm</code>, <code>by=measurement</code></li>
+</ul></li>
+<li><em>List of desks with their occupancy state (occupied, warm or free)</em> (occupancy of desks)
+<ul>
+<li><code>fn=occupancy</code>, <code>of=desks</code></li>
+</ul></li>
+</ul>
+<h3 id="number-of-desks-statsfncountofdeskstimefilter2estarttimefilter2eend">Number of Desks [/stats?fn=count&amp;of=desks{&amp;timeFilter%2estart,timeFilter%2eend}]</h3>
+<h4 id="get-number-of-desks-get">Get Number of Desks [GET]</h4>
+<ul>
+<li>Parameters
+<ul>
+<li>timeFilter%2estart (required, isodatetime, <code>2014-01-01T10:00:00.000Z</code>) ... Earliest time of an event</li>
+<li>timeFilter%2eend (required, isodatetime, <code>2015-01-01T10:00:00.000Z</code>) ... Latest time of an event</li>
+</ul></li>
+<li><p>Response 200 (application/json)</p>
+<pre><code>{
+    &quot;stats&quot;: [
+        {
+            &quot;dateTime&quot;: null,
+            &quot;value&quot;: 131
+        }
+    ]
+}</code></pre></li>
+</ul>
+<h3 id="timeline-of-occupied-desks-statsfnsumofdesks.occupiedbyminutetimefilter2estarttimefilter2eend">Timeline of occupied desks [/stats?fn=sum&amp;of=desks.occupied&amp;by=minute{&amp;timeFilter%2estart,timeFilter%2eend}]</h3>
+<h4 id="get-timeline-of-occupied-desks-get">Get Timeline of occupied desks [GET]</h4>
+<ul>
+<li>Parameters
+<ul>
+<li>timeFilter%2estart (required, isodatetime, <code>2014-01-01T10:00:00.000Z</code>) ... Earliest time of an event</li>
+<li>timeFilter%2eend (required, isodatetime, <code>2015-01-01T10:00:00.000Z</code>) ... Latest time of an event</li>
+</ul></li>
+<li><p>Response 200 (application/json)</p>
+<pre><code>{
+    &quot;stats&quot;: [
+        {
+            &quot;dateTime&quot;: &quot;2014-09-28T18:00:00.000+02:00&quot;,
+            &quot;value&quot;: 73
+        },
+        {
+            &quot;dateTime&quot;: &quot;2014-09-28T19:00:00.000+02:00&quot;,
+            &quot;value&quot;: 74
+        },
+        {
+            &quot;dateTime&quot;: &quot;2014-09-28T20:00:00.000+02:00&quot;,
+            &quot;value&quot;: 69
+        }
+    ]
+}</code></pre></li>
+</ul>
+<h3 id="timeline-of-warm-desks-statsfnsumofdesks.warmbyminutetimefilter2estarttimefilter2eend">Timeline of warm desks [/stats?fn=sum&amp;of=desks.warm&amp;by=minute{&amp;timeFilter%2estart,timeFilter%2eend}]</h3>
+<h4 id="get-timeline-of-warm-desks-get">Get Timeline of warm desks [GET]</h4>
+<ul>
+<li>Parameters
+<ul>
+<li>timeFilter%2estart (required, isodatetime, <code>2014-01-01T10:00:00.000Z</code>) ... Earliest time of an event</li>
+<li>timeFilter%2eend (required, isodatetime, <code>2015-01-01T10:00:00.000Z</code>) ... Latest time of an event</li>
+</ul></li>
+<li><p>Response 200 (application/json)</p>
+<pre><code>{
+    &quot;stats&quot;: [
+        {
+            &quot;dateTime&quot;: &quot;2014-09-28T18:00:00.000+02:00&quot;,
+            &quot;value&quot;: 73
+        },
+        {
+            &quot;dateTime&quot;: &quot;2014-09-28T19:00:00.000+02:00&quot;,
+            &quot;value&quot;: 74
+        },
+        {
+            &quot;dateTime&quot;: &quot;2014-09-28T20:00:00.000+02:00&quot;,
+            &quot;value&quot;: 74
+        }
+    ]
+}</code></pre></li>
+</ul>
+<h3 id="heatmap-statsfnsumofdesks.occupiedbydesktimefilter2estarttimefilter2eend">Heatmap [/stats?fn=sum&amp;of=desks.occupied&amp;by=desk{&amp;timeFilter%2estart,timeFilter%2eend}]</h3>
+<h4 id="get-heatmap-get">Get Heatmap [GET]</h4>
+<ul>
+<li>Parameters
+<ul>
+<li>timeFilter%2estart (required, isodatetime, <code>2014-01-01T10:00:00.000Z</code>) ... Earliest time of an event</li>
+<li>timeFilter%2eend (required, isodatetime, <code>2015-01-01T10:00:00.000Z</code>) ... Latest time of an event</li>
+</ul></li>
+<li><p>Response 200 (application/json)</p>
+<pre><code>{
+  &quot;stats&quot;: [
+    {
+      &quot;dateTime&quot;: &quot;2014-03-31T22:00:00Z&quot;,
+      &quot;location&quot;: {
+        &quot;id&quot;: 9
+      },
+      &quot;value&quot;: 1895463
+    },
+    {
+      &quot;dateTime&quot;: &quot;2014-03-31T22:00:00Z&quot;,
+      &quot;location&quot;: {
+        &quot;id&quot;: 10
+      },
+      &quot;value&quot;: 2502876
+    },
+    {
+      &quot;dateTime&quot;: &quot;2014-03-31T22:00:00Z&quot;,
+      &quot;location&quot;: {
+        &quot;id&quot;: 11
+      },
+      &quot;value&quot;: 2412004
+    }
+}</code></pre></li>
+</ul>
+<h3 id="average-usage-during-workhours-statsfnavgofdesks.occupiedtimefilter2estarttimefilter2eend">Average usage during workhours [/stats?fn=avg&amp;of=desks.occupied{&amp;timeFilter%2estart,timeFilter%2eend}]</h3>
+<h4 id="get-average-usage-during-workhours-get">Get Average usage during workhours [GET]</h4>
+<ul>
+<li>Parameters
+<ul>
+<li>timeFilter%2estart (required, isodatetime, <code>2014-01-01T10:00:00.000Z</code>) ... Earliest time of an event</li>
+<li>timeFilter%2eend (required, isodatetime, <code>2015-01-01T10:00:00.000Z</code>) ... Latest time of an event</li>
+</ul></li>
+<li><p>Response 200 (application/json)</p>
+<pre><code>{
+  &quot;stats&quot;: [
+    {
+      &quot;dateTime&quot;: &quot;2014-03-31T22:00:00Z&quot;,
+      &quot;value&quot;: 53
+    }
+  ]
+}</code></pre></li>
+</ul>
+<h3 id="maximum-desk-usage-statsfnmaxofdesks.occupiedtimefilter2estarttimefilter2eend">Maximum desk usage [/stats?fn=max&amp;of=desks.occupied{&amp;timeFilter%2estart,timeFilter%2eend}]</h3>
+<h4 id="get-maximum-desk-usage-get">Get Maximum desk usage [GET]</h4>
+<ul>
+<li>Parameters
+<ul>
+<li>timeFilter%2estart (required, isodatetime, <code>2014-01-01T10:00:00.000Z</code>) ... Earliest time of an event</li>
+<li>timeFilter%2eend (required, isodatetime, <code>2015-01-01T10:00:00.000Z</code>) ... Latest time of an event</li>
+</ul></li>
+<li><p>Response 200 (application/json)</p>
+<pre><code>{
+    &quot;stats&quot;: [
+        {
+            &quot;dateTime&quot;: &quot;2014-04-08T14:55:00+02:00&quot;,
+            &quot;value&quot;: 74
+        }
+    ]
+}</code></pre></li>
+</ul>
+<h3 id="maximum-desk-usage-per-floor-statsfnmaxofdesks.occupiedbyfloortimefilter2estarttimefilter2eend">Maximum desk usage per floor [/stats?fn=max&amp;of=desks.occupied&amp;by=floor{&amp;timeFilter%2estart,timeFilter%2eend}]</h3>
+<h4 id="get-maximum-desk-usage-get-1">Get Maximum desk usage [GET]</h4>
+<ul>
+<li>Parameters
+<ul>
+<li>timeFilter%2estart (required, isodatetime, <code>2014-01-01T10:00:00.000Z</code>) ... Earliest time of an event</li>
+<li>timeFilter%2eend (required, isodatetime, <code>2015-01-01T10:00:00.000Z</code>) ... Latest time of an event</li>
+</ul></li>
+<li><p>Response 200 (application/json)</p>
+<pre><code>{
+    &quot;stats&quot;: [
+        {
+            &quot;dateTime&quot;: &quot;2014-04-08T14:55:00+02:00&quot;,
+            &quot;value&quot;: 34,
+            &quot;floor&quot;: {
+                &quot;id&quot;: 1
+            }
+        },
+        {
+            &quot;dateTime&quot;: &quot;2014-04-08T16:00:00+02:00&quot;,
+            &quot;value&quot;: 40,
+            &quot;floor&quot;: {
+                &quot;id&quot;: 2
+            }
+        }
+    ]
+}</code></pre></li>
+</ul>
+<h3 id="maximum-desk-usage-per-floor-and-attribute-type-statsfnmaxofdesks.occupiedbyfloorattributetypetimefilter2estarttimefilter2eend">Maximum desk usage per floor and attribute type [/stats?fn=max&amp;of=desks.occupied&amp;by=floor,{attributeType}{&amp;timeFilter%2estart,timeFilter%2eend}]</h3>
+<h4 id="get-maximum-desk-usage-get-2">Get Maximum desk usage [GET]</h4>
+<p>Note: locationAttribute can be null, if there are locations that don't have the specified attributeType. For example, the locationFilter selects all locations of a floor, and the <code>by=</code> selects <code>floor,deskType</code> but some locations do not have an attribute with <code>deskType</code> attribute type configured.</p>
+<ul>
+<li>Parameters
+<ul>
+<li>attributeType (required, string, <code>department</code>) ... A valid attribute type</li>
+<li>timeFilter%2estart (required, isodatetime, <code>2014-01-01T10:00:00.000Z</code>) ... Earliest time of an event</li>
+<li>timeFilter%2eend (required, isodatetime, <code>2015-01-01T10:00:00.000Z</code>) ... Latest time of an event</li>
+</ul></li>
+<li><p>Response 200 (application/json)</p>
+<pre><code>{
+    &quot;stats&quot;: [
+        {
+            &quot;dateTime&quot;: &quot;2014-04-08T14:55:00+02:00&quot;,
+            &quot;value&quot;: 24,
+            &quot;floor&quot;: {
+                &quot;id&quot;: 1
+            },
+            &quot;locationAttribute&quot;: {
+                &quot;id&quot;: 10
+            }
+        },
+        {
+            &quot;dateTime&quot;: &quot;2014-04-08T14:00:00+02:00&quot;,
+            &quot;value&quot;: 10,
+            &quot;floor&quot;: {
+                &quot;id&quot;: 1
+            },
+            &quot;locationAttribute&quot;: {
+                &quot;id&quot;: 11
+            }
+        },
+        {
+            &quot;dateTime&quot;: &quot;2014-04-08T16:00:00+02:00&quot;,
+            &quot;value&quot;: 25,
+            &quot;floor&quot;: {
+                &quot;id&quot;: 2
+            },
+            &quot;locationAttribute&quot;: {
+                &quot;id&quot;: 10
+            }
+        },
+        {
+            &quot;dateTime&quot;: &quot;2014-04-08T16:23:00+02:00&quot;,
+            &quot;value&quot;: 20lo,
+            &quot;floor&quot;: {
+                &quot;id&quot;: 2
+            },
+            &quot;locationAttribute&quot;: {
+                &quot;id&quot;: 12
+            }
+        }
+    ]
+}</code></pre></li>
+</ul>
+<h3 id="frequency-distribution-of-the-workhour-occupancy-statsfnfreqofdesks.occupiedtimefilter2estarttimefilter2eend">Frequency distribution of the workhour occupancy [/stats?fn=freq&amp;of=desks.occupied{&amp;timeFilter%2estart,timeFilter%2eend}]</h3>
+<h4 id="get-frequency-distribution-of-the-workhour-occupancy-get">Get Frequency distribution of the workhour occupancy [GET]</h4>
+<ul>
+<li>Parameters
+<ul>
+<li>timeFilter%2estart (required, isodatetime, <code>2014-01-01T10:00:00.000Z</code>) ... Earliest time of an event</li>
+<li>timeFilter%2eend (required, isodatetime, <code>2015-01-01T10:00:00.000Z</code>) ... Latest time of an event</li>
+</ul></li>
+<li><p>Response 200 (application/json)</p>
+<pre><code>{
+  &quot;stats&quot;: [
+        {
+          &quot;base&quot;: 61,
+          &quot;dateTime&quot;: &quot;2014-03-31T22:00:00Z&quot;,
+          &quot;frequency&quot;: 0.0004943153732081067
+        },
+        {
+          &quot;base&quot;: 62,
+          &quot;dateTime&quot;: &quot;2014-03-31T22:00:00Z&quot;,
+          &quot;frequency&quot;: 0.001977261492832427
+        },
+        {
+          &quot;base&quot;: 63,
+          &quot;dateTime&quot;: &quot;2014-03-31T22:00:00Z&quot;,
+          &quot;frequency&quot;: 0.01532377656945131
+        }
+    ]
+}</code></pre></li>
+</ul>
+<h3 id="list-of-desks-with-their-occupancy-state-statsfnoccupancyofdeskstimefilter2eat">List of desks with their occupancy state [/stats?fn=occupancy&amp;of=desks{&amp;timeFilter%2eat}]</h3>
+<h4 id="get-list-of-desks-with-their-occupancy-state-get">Get list of desks with their occupancy state [GET]</h4>
+<ul>
+<li>Parameters
+<ul>
+<li>timeFilter%2eat (required, isodatetime, <code>2015-04-07T13:03:11.000Z</code>) ... date time for which to report the occupancy states</li>
+</ul></li>
+<li><p>Response 200 (application/json)</p>
+<pre><code>{
+    &quot;stats&quot;: [
+        {
+            &quot;dateTime&quot;: &quot;2015-04-07T13:03:11Z&quot;,
+            &quot;location&quot;: {
+                &quot;id&quot;: 118
+            },
+            &quot;value&quot;: &quot;OCCUPIED&quot;
+        },
+        {
+            &quot;dateTime&quot;: &quot;2015-04-07T13:03:11Z&quot;,
+            &quot;location&quot;: {
+                &quot;id&quot;: 119
+            },
+            &quot;value&quot;: &quot;FREE&quot;
+        },
+        {
+            &quot;dateTime&quot;: &quot;2015-04-07T13:03:11Z&quot;,
+            &quot;location&quot;: {
+                &quot;id&quot;: 123
+            },
+            &quot;value&quot;: &quot;WARM&quot;
+        }
+    ]
+}</code></pre></li>
+</ul>
+<h3 id="get-latest-measurement-timestamps-statsfnmaxofmeasurement.timestamp">Get Latest measurement timestamps [/stats?fn=max&amp;of=measurement.timestamp]</h3>
+<h4 id="get-latest-measurement-timestamps-get">Get Latest measurement timestamps [GET]</h4>
+<ul>
+<li><p>Response 200 (application/json)</p>
+<pre><code>{
+    &quot;stats&quot;: [
+        {
+            &quot;dateTime&quot;: &quot;2016-02-25T16:28:09Z&quot;
+        }
+    ]
+}</code></pre></li>
+</ul>
