@@ -1,0 +1,982 @@
+{
+    "locationAttributes": [
+        {
+            "typeName": "Zone", 
+            "type": "zone", 
+            "id": 1, 
+            "value": "100"
+        }, 
+        {
+            "typeName": "Zone", 
+            "type": "zone", 
+            "id": 2, 
+            "value": "200"
+        }, 
+        {
+            "typeName": "Zone", 
+            "type": "zone", 
+            "id": 3, 
+            "value": "300"
+        }, 
+        {
+            "typeName": "Zone", 
+            "type": "zone", 
+            "id": 4, 
+            "value": "400"
+        }, 
+        {
+            "typeName": "Zone", 
+            "type": "zone", 
+            "id": 5, 
+            "value": "500"
+        }, 
+        {
+            "typeName": "Zone", 
+            "type": "zone", 
+            "id": 6, 
+            "value": "600"
+        }, 
+        {
+            "typeName": "Zone", 
+            "type": "zone", 
+            "id": 7, 
+            "value": "700"
+        }, 
+        {
+            "typeName": "Zone", 
+            "type": "zone", 
+            "id": 8, 
+            "value": "800"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Zuteilung", 
+            "type": "arbeitsplatzZuteilung", 
+            "id": 9, 
+            "value": "fix"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Zuteilung", 
+            "type": "arbeitsplatzZuteilung", 
+            "id": 10, 
+            "value": "fix (KD1)"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Zuteilung", 
+            "type": "arbeitsplatzZuteilung", 
+            "id": 11, 
+            "value": "fix (KD2)"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Typ", 
+            "type": "arbeitsplatzTyp", 
+            "id": 12, 
+            "value": "Normal"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Typ", 
+            "type": "arbeitsplatzTyp", 
+            "id": 14, 
+            "value": "Werkbank"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Typ", 
+            "type": "arbeitsplatzTyp", 
+            "id": 15, 
+            "value": "Meetingraum (nicht-reservierbar)"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Typ", 
+            "type": "arbeitsplatzTyp", 
+            "id": 16, 
+            "value": "Meetingraum (reservierbar)"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 17, 
+            "value": "HNH Rsh Fxvixv"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 18, 
+            "value": "HNH Woutubwu"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 19, 
+            "value": "HNH Hvtllatxr"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 20, 
+            "value": "HNH HNH Hhaewob xuk Htzwr"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 21, 
+            "value": "HNH PQ"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 22, 
+            "value": "HNH Rogwmrw"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 23, 
+            "value": "LI"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 24, 
+            "value": "LI-LDD"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 25, 
+            "value": "LI1"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 26, 
+            "value": "LI1/LI10"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 27, 
+            "value": "LI17/174"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 28, 
+            "value": "LI177"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 29, 
+            "value": "LI177/Dwls"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 30, 
+            "value": "LI172"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 31, 
+            "value": "LI178"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 32, 
+            "value": "LI121"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 33, 
+            "value": "LI127"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 34, 
+            "value": "LI122"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 35, 
+            "value": "LI129"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 36, 
+            "value": "LI19"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 37, 
+            "value": "LI191"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 38, 
+            "value": "LI197"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 39, 
+            "value": "LI192"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 40, 
+            "value": "LI199"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 41, 
+            "value": "LI7"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 42, 
+            "value": "LI71/LI718/LI719"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 43, 
+            "value": "LI711"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 44, 
+            "value": "LI717"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 45, 
+            "value": "LI771"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 46, 
+            "value": "LI777"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 47, 
+            "value": "LI772"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 48, 
+            "value": "LI778"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 49, 
+            "value": "LI779"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 50, 
+            "value": "LI774"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 51, 
+            "value": "LI721"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 52, 
+            "value": "LI727"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 53, 
+            "value": "LI728"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 54, 
+            "value": "LI729"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 55, 
+            "value": "LI724"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 56, 
+            "value": "LI723"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 57, 
+            "value": "LI781"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 58, 
+            "value": "LI787"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 59, 
+            "value": "LI782"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 60, 
+            "value": "LI788"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 61, 
+            "value": "LI789"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 62, 
+            "value": "LI79"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 63, 
+            "value": "LI741"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 64, 
+            "value": "LI742"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 65, 
+            "value": "LI748"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 66, 
+            "value": "LI749"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 67, 
+            "value": "LI744"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 68, 
+            "value": "LI2"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 69, 
+            "value": "LI217"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 70, 
+            "value": "LI271"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 71, 
+            "value": "LI272"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 72, 
+            "value": "LI224"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 73, 
+            "value": "LI8/LI801/LI82"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 74, 
+            "value": "LI81"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 75, 
+            "value": "LI87"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 76, 
+            "value": "LI88"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 77, 
+            "value": "LI9"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 78, 
+            "value": "LI4"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 79, 
+            "value": "LI48"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 80, 
+            "value": "LI3"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 81, 
+            "value": "LI30"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 82, 
+            "value": "Vwovwm LI"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 83, 
+            "value": "Vwovxuq LI72/78/74"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 84, 
+            "value": "HBN Hxiismv"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 85, 
+            "value": "Hatmw"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 86, 
+            "value": "QHN-LI"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 108, 
+            "value": "NZX"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 118, 
+            "value": "LZH7"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 126, 
+            "value": "C"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 128, 
+            "value": "M LI"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 150, 
+            "value": "IQBDH"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 158, 
+            "value": "NB"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 223, 
+            "value": "LZH, LZH HIBK, LZH MFZ, LZH5"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 235, 
+            "value": "LZH25"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 239, 
+            "value": "LZH4"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 240, 
+            "value": "LZH1"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 257, 
+            "value": "NZ1"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 320, 
+            "value": "LZH3"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 336, 
+            "value": "LZH38"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 404, 
+            "value": "NZ7+NZX"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 426, 
+            "value": "NZ7"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 462, 
+            "value": "NZ9"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 473, 
+            "value": "NZ8+NZ9"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 481, 
+            "value": "NZ8"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 485, 
+            "value": "NZ"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 519, 
+            "value": "NZ3"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 566, 
+            "value": "NZ5"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 595, 
+            "value": "NZ3+5"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 677, 
+            "value": "NZ4"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 708, 
+            "value": "NG"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 709, 
+            "value": "NG2"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 710, 
+            "value": "NG9"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 755, 
+            "value": "NG1/NG4/NG3"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 785, 
+            "value": "NG7"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 786, 
+            "value": "NG8"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 944, 
+            "value": "NV"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 945, 
+            "value": "NV1"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 949, 
+            "value": "NV7"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1007, 
+            "value": "NV5"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1048, 
+            "value": "N"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1098, 
+            "value": "NV3"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1118, 
+            "value": "NV4"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1196, 
+            "value": "CBF"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1204, 
+            "value": "W"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1243, 
+            "value": "LItkash"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1376, 
+            "value": "M"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1477, 
+            "value": "MV"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1525, 
+            "value": "MQ"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1543, 
+            "value": "U"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1661, 
+            "value": "GQ"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1662, 
+            "value": "LI287"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1663, 
+            "value": "LI17"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1664, 
+            "value": "LI128"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1665, 
+            "value": "LI1 Vwovxuq"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1666, 
+            "value": "LI12/LI127"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1667, 
+            "value": "LI184"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1668, 
+            "value": "LI187"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1669, 
+            "value": "LI11"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1670, 
+            "value": "LI182"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1671, 
+            "value": "LI181"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1672, 
+            "value": "N-Vti"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1673, 
+            "value": "LI198"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1674, 
+            "value": "LI19 Vv./LI192"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1675, 
+            "value": "LI718/LI719"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1676, 
+            "value": "LI278"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1677, 
+            "value": "LI282"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Typ", 
+            "type": "arbeitsplatzTyp", 
+            "id": 1678, 
+            "value": "Projektarbeitsplatz"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Typ", 
+            "type": "arbeitsplatzTyp", 
+            "id": 1679, 
+            "value": "Besprechungszone"
+        }, 
+        {
+            "typeName": "PostFinance Zone", 
+            "type": "postfinanceZone", 
+            "id": 1680, 
+            "value": "OE-\u00fcbergreifende Zone"
+        }, 
+        {
+            "typeName": "PostFinance Zone", 
+            "type": "postfinanceZone", 
+            "id": 1681, 
+            "value": "Konzentrationszone"
+        }, 
+        {
+            "typeName": "PostFinance Zone", 
+            "type": "postfinanceZone", 
+            "id": 1682, 
+            "value": "Call Floor"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Zuteilung", 
+            "type": "arbeitsplatzZuteilung", 
+            "id": 1683, 
+            "value": "fix (ZUKO)"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Zuteilung", 
+            "type": "arbeitsplatzZuteilung", 
+            "id": 1684, 
+            "value": "fix (GL/VR)"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Zuteilung", 
+            "type": "arbeitsplatzZuteilung", 
+            "id": 1685, 
+            "value": "fix (ZUKO SPS)"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Zuteilung", 
+            "type": "arbeitsplatzZuteilung", 
+            "id": 1686, 
+            "value": "fix (Cockpit ZUKO)"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Typ", 
+            "type": "arbeitsplatzTyp", 
+            "id": 1687, 
+            "value": "Kaffee-Austausch"
+        }, 
+        {
+            "typeName": "PostFinance Zone", 
+            "type": "postfinanceZone", 
+            "id": 1688, 
+            "value": "Projekt"
+        }, 
+        {
+            "typeName": "Team", 
+            "type": "team", 
+            "id": 1689, 
+            "value": "NW3"
+        }, 
+        {
+            "typeName": "Arbeitsplatz-Typ", 
+            "type": "arbeitsplatzTyp", 
+            "id": 1690, 
+            "value": "Normal (ungemessen)"
+        }, 
+        {
+            "typeName": "App Zone", 
+            "type": "appZone", 
+            "id": 1691, 
+            "value": "A"
+        }, 
+        {
+            "typeName": "App Zone", 
+            "type": "appZone", 
+            "id": 1692, 
+            "value": "B"
+        }, 
+        {
+            "typeName": "App Zone", 
+            "type": "appZone", 
+            "id": 1693, 
+            "value": "C"
+        }, 
+        {
+            "typeName": "App Zone", 
+            "type": "appZone", 
+            "id": 1694, 
+            "value": "D"
+        }, 
+        {
+            "typeName": "App Zone", 
+            "type": "appZone", 
+            "id": 1695, 
+            "value": "E"
+        }
+    ]
+}
