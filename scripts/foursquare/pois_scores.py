@@ -36,7 +36,7 @@ for idEdificio in data:
 
   scoreList=list(d.values())
  
-  #scoreList=scoreList.sort()
+  scoreList.sort()
   print(scoreList)
   score=0
   
