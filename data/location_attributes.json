@@ -49,44 +49,44 @@
             "value": "800"
         }, 
         {
-            "typeName": "Arbeitsplatz-Zuteilung", 
-            "type": "arbeitsplatzZuteilung", 
+            "typeName": "Workplace-Zuteilung", 
+            "type": "WorkplaceZuteilung", 
             "id": 9, 
             "value": "fix"
         }, 
         {
-            "typeName": "Arbeitsplatz-Zuteilung", 
-            "type": "arbeitsplatzZuteilung", 
+            "typeName": "Workplace-Zuteilung", 
+            "type": "WorkplaceZuteilung", 
             "id": 10, 
             "value": "fix (KD1)"
         }, 
         {
-            "typeName": "Arbeitsplatz-Zuteilung", 
-            "type": "arbeitsplatzZuteilung", 
+            "typeName": "Workplace-Zuteilung", 
+            "type": "WorkplaceZuteilung", 
             "id": 11, 
             "value": "fix (KD2)"
         }, 
         {
-            "typeName": "Arbeitsplatz-Typ", 
-            "type": "arbeitsplatzTyp", 
+            "typeName": "Workplace-Typ", 
+            "type": "WorkplaceTyp", 
             "id": 12, 
             "value": "Normal"
         }, 
         {
-            "typeName": "Arbeitsplatz-Typ", 
-            "type": "arbeitsplatzTyp", 
+            "typeName": "Workplace-Typ", 
+            "type": "WorkplaceTyp", 
             "id": 14, 
             "value": "Werkbank"
         }, 
         {
-            "typeName": "Arbeitsplatz-Typ", 
-            "type": "arbeitsplatzTyp", 
+            "typeName": "Workplace-Typ", 
+            "type": "WorkplaceTyp", 
             "id": 15, 
             "value": "Meetingraum (nicht-reservierbar)"
         }, 
         {
-            "typeName": "Arbeitsplatz-Typ", 
-            "type": "arbeitsplatzTyp", 
+            "typeName": "Workplace-Typ", 
+            "type": "WorkplaceTyp", 
             "id": 16, 
             "value": "Meetingraum (reservierbar)"
         }, 
@@ -871,14 +871,14 @@
             "value": "LI282"
         }, 
         {
-            "typeName": "Arbeitsplatz-Typ", 
-            "type": "arbeitsplatzTyp", 
+            "typeName": "Workplace-Typ", 
+            "type": "WorkplaceTyp", 
             "id": 1678, 
-            "value": "Projektarbeitsplatz"
+            "value": "ProjektWorkplace"
         }, 
         {
-            "typeName": "Arbeitsplatz-Typ", 
-            "type": "arbeitsplatzTyp", 
+            "typeName": "Workplace-Typ", 
+            "type": "WorkplaceTyp", 
             "id": 1679, 
             "value": "Besprechungszone"
         }, 
@@ -901,32 +901,32 @@
             "value": "Call Floor"
         }, 
         {
-            "typeName": "Arbeitsplatz-Zuteilung", 
-            "type": "arbeitsplatzZuteilung", 
+            "typeName": "Workplace-Zuteilung", 
+            "type": "WorkplaceZuteilung", 
             "id": 1683, 
             "value": "fix (ZUKO)"
         }, 
         {
-            "typeName": "Arbeitsplatz-Zuteilung", 
-            "type": "arbeitsplatzZuteilung", 
+            "typeName": "Workplace-Zuteilung", 
+            "type": "WorkplaceZuteilung", 
             "id": 1684, 
             "value": "fix (GL/VR)"
         }, 
         {
-            "typeName": "Arbeitsplatz-Zuteilung", 
-            "type": "arbeitsplatzZuteilung", 
+            "typeName": "Workplace-Zuteilung", 
+            "type": "WorkplaceZuteilung", 
             "id": 1685, 
             "value": "fix (ZUKO SPS)"
         }, 
         {
-            "typeName": "Arbeitsplatz-Zuteilung", 
-            "type": "arbeitsplatzZuteilung", 
+            "typeName": "Workplace-Zuteilung", 
+            "type": "WorkplaceZuteilung", 
             "id": 1686, 
             "value": "fix (Cockpit ZUKO)"
         }, 
         {
-            "typeName": "Arbeitsplatz-Typ", 
-            "type": "arbeitsplatzTyp", 
+            "typeName": "Workplace-Typ", 
+            "type": "WorkplaceTyp", 
             "id": 1687, 
             "value": "Kaffee-Austausch"
         }, 
@@ -943,8 +943,8 @@
             "value": "NW3"
         }, 
         {
-            "typeName": "Arbeitsplatz-Typ", 
-            "type": "arbeitsplatzTyp", 
+            "typeName": "Workplace-Typ", 
+            "type": "WorkplaceTyp", 
             "id": 1690, 
             "value": "Normal (ungemessen)"
         }, 
